@@ -1,0 +1,18 @@
+config_version : 0
+
+name: shiboken
+
+version: 1.2.4
+
+variants:
+- [ platform-linux ]
+
+# Also make sure you have libxlst-devel package installed.
+requires:
+  - python-2.7
+  - qt
+
+commands:
+- export PATH=!ROOT!/bin:$PATH
+- export LD_LIBRARY_PATH=!ROOT!/lib:$LD_LIBRARY_PATH
+- export PYTHONPATH=:!ROOT!/lib64/python2.7/site-packages:$PYTHONPATH
